@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="PlaneMesh" id=2]
+
+[node name="main" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="player" type="KinematicBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="player"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
